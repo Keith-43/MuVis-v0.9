@@ -39,9 +39,9 @@ Let us estimate what value for binCount we will need:  (1) Divide the total freq
 	Top-4		689 Hz		to 1,378 Hz		192		256
 	Top-3		1,378 Hz	to 2,756 Hz		384		512
 	Top-2		2,756 Hz	to 5,512 Hz		768		1,024
-	Top-1		5,512 Hz	to 11,025 Hz	1,536	2,048
-	Top		    11,025 Hz	to 22,050 Hz	3,072	4,096
-                                Total:		6,132	8,192 = binCount <- This implies using FFTs of length 16,384.
+	Top-1		5,512 Hz	to 11,025 Hz	        1,536	        2,048
+	Top		11,025 Hz	to 22,050 Hz		3,072		4,096
+                                		Total:		6,132		8,192 = binCount <- This implies using FFTs of length 16,384.
 
 Let us stop here and make an important observation (and an important simplification):  In my years of developing music visualization techniques, I have observed that very little of interest occurs above the frequency 5,512 Hz.  There is very little energy above that frequency and whatever there is hardly shows up on a visualization.  We can truncate the frequency range to 0 Hz through 5,512 Hz and still see musically-meaningful and aesthetically-pleasing visualizations.  (Note that these comments do not apply to listening to the music - only to visualizing the music.)
 
@@ -57,7 +57,7 @@ This frequency truncation implies ignoring the binValues for three-quarters of t
 	Top-2		689 Hz		to 1,378 Hz		256
 	Top-1		1,378 Hz	to 2,756 Hz		512
 	Top		    2,756 Hz	to 5,512 Hz		1,024
-                                    Total:	2,048 = binCount    <- This implies using FFTs of length 4,096.
+                                    			Total:	2,048 = binCount    <- This implies using FFTs of length 4,096.
 
 This simplification greatly reduces the computation load and the array sizes.  We will use:
 
