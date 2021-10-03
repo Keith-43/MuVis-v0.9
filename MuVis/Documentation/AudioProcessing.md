@@ -69,9 +69,9 @@ The AVAudioEngine API allows the developer to set up a sequence of "nodes" to pr
 
 
 	microphone -------> micMixer ------> mixer -------> mixer2 -------> main -------> (to speakers)
-			    node             node      |    node            mixer
-                                     		       |                    node
-                                     		       v
+			    node             node       |   node            mixer
+			    				|                    node
+							v
                                  		sampling tap
   
 The micMixer node amplifies the audio signal from the device's microphone input.
@@ -81,9 +81,9 @@ The mainMixerNode is implemented automatically by the AVAudioEngine and links to
 If the variable filePlayEnabled is true then the sequence of nodes processes audio data from song files selected from the device's file structure.  The sequence comprises the following node architecture:
 
 	(file) -------> player --------> mixer --------> delay -------> main  -------> (to speakers)
-             		node             node      |     node           mixer
-                                   		   |                    node
-                                		   v
+			node             node      |     node           mixer
+						   |                    node
+						   v
                              			sampling tap
 
 The player node plays the audio stream from the desired music file.
