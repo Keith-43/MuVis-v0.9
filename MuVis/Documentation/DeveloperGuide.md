@@ -2,7 +2,7 @@
 #  MuVis Developer Guide
 by Keith Bromley, San Diego, CA, USA &nbsp; &nbsp; kbromley@me.com
 
-####Overview:
+#### **Overview:**
 
 The MuVis app runs on macOS, iOS, and iPadOS.  Upon opening, it plays a music song file stored internally, and renders a spectrum-like display.
 The user can push the "Select Song" button in the bottom toolbar to open a pop-up file-picker pane allowing her to select a song file to play next.
@@ -19,7 +19,7 @@ The main parts of the code are:
 3.  The AudioManager.swift file handles the audio subsytem (using Apple's AVAudioEngine API).  
 4   The Visualizations folder contains about twenty SwiftUI views each rendering a particular visualization.
 
-####History:
+#### **History:**
 
 This project started life in August 2020 as an exact clone of the project "Metal Audio Visualizer" by Alex Barbulescu.
 I am indebted to him for providing me with a valuable starting point in my early explorations.
@@ -44,12 +44,12 @@ for FFT computations.
 In Septermber 2020, I decided that the Metal framwork was not the right tool for the 2D drawing that I had in mind.
 I switched to Quartz 2D (part of Core Graphics).
 
-####The User Interface:
+#### **The User Interface:**
 
 The user-interface is based upon SwiftUI.  Unfortunately, Apple's SwiftUI API is currently an incomplete work-in-progress.  So, I expect
 the user-interface to look more polished with each new SwiftUI release from Apple.  The document UserGuide.md provided in the Documentation folder provides a more-detailed desciption of the user-interface.
 
-####The Audio Subsystem:
+#### **The Audio Subsystem:**
 
 Apple has several high-level APIs for handling audio functionality.  I have chosen to use the AVAudioEngine API because (1) the "Metal Audio
 Visualizer" tutorial provided a complete working example app for me to copy as a starting point, (2) it allows acces to live audio data through
@@ -59,7 +59,7 @@ delay node in the audio path (after sampling) to compensate for the latency intr
  
 The document AudioProcessing.md provided in the Documentation folder gives more detail on the AudioManager class.
 
-####The Visualizations:
+#### **The Visualizations:**
 
 The MuVis app currently contains about twenty visualizations - some are scientifically-based; some are music-theory based; and some are
 simply aesthetically pleasing.  The document Visualizations.md provided in the Documentation folder describes each of them.
