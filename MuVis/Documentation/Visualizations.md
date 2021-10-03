@@ -220,7 +220,7 @@ The harmonic increment (harmIncrement) for our 6 rendered harmonics is 0, 12, 19
 
 We use the following values of hue to assign colors to these harmonics:
 
-	hue = 0		red			harm = 1	fundamental
+	hue = 0		red		harm = 1	fundamental
 	hue = 1/6	yellow		harm = 2
 	hue = 2/6	green		harm = 3
 	hue = 3/6	cyan		harm = 4
