@@ -8,7 +8,7 @@ Real-time music visualization is an exciting endeavor - providing the user with 
 
 When the MuVis app first opens, the on-screen display should look somewhat like:
 
-![OpeningScreen](Documentation/Doc_Images/UserGuideAa.png)
+![OpeningScreen](MuVis/Documentation/Doc_Images/UserGuideAa.png)
 
 and the computer's speakers should be playing music from a pre-loaded royalty-free music file. (Currently, the song file is "The Elevator Bossa Nova" from Bensound.com.)  The on-screen display shows a real-time dynamic visual representation of the audio that you are hearing.
 
