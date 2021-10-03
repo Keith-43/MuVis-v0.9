@@ -16,8 +16,8 @@ This project uses the Swift programming language and the Xcode integrated develo
 The main parts of the code are:  
 1.  The MuVisApp.swift file simply serves as the starting point for the app.  It also contains several global constants and variables.  
 2.  The ContentView.swift file handles the GUI (graphical user interface) of the app (mainly using SwiftUI).  
-3.  The AudioManager.swift file handles the audio subsytem (using Apple's AVAudioEngine API).  
-4   The Visualizations folder contains about twenty SwiftUI views each rendering a particular visualization.
+3.  The AudioManager.swift file handles the audio subsytem (using Apple's AVAudioEngine API).   
+4.  The Visualizations folder contains about twenty SwiftUI views each rendering a particular visualization.
 
 #### **History:**
 
