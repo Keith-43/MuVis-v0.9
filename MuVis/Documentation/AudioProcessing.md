@@ -152,7 +152,7 @@ with the parameters:
 
 The only help that Apple's documentation gives us is: "[This function] generates vector C by interpolating between neighboring values of vector A as controlled by vector B. The integer portion of each element in B is the zero-based index of the first element of a pair of adjacent values in vector A. The value of the corresponding element of C is derived from these two values by quadratic interpolation, using the fractional part of the value in B." 
 
-All that remains now is to massage our horizontal coordinates into the form desired by this vDSP_vqint function.  Our input array spectrum[binNum] and it's integer indices are already in the desired form - wherein the values corresponding to the integer part of the indices is known and correct - namely the spectrum[binNum].  It extends over the range from 0 to 5,512.5 Hz.
+All that remains now is to massage our horizontal coordinates into the form desired by this vDSP_vqint function.  Our input array spectrum[binNum] and it's integer indices are already in the desired form (See Equation 1) - wherein the values corresponding to the integer part of the indices is known and correct - namely the spectrum[binNum].  It extends over the range from 0 to 5,512.5 Hz.
 
 However, we need to slightly modify the output coordinates.  We need to adjust the desired resampling coordinates so that they extend over the same range. If we divide both sides of Equation 2 by binFreqWidth, we get
 
