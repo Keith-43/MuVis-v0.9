@@ -20,7 +20,6 @@ It runs on macOS, iOS, and iPadOS. It was developed using Swift, SwiftUI, and Xc
 It plays song files from the user's device, and also live audio from the device's microphone.  
 In the AudioManager class , the code using the AVCaptureSession API was deleted.  
 The AudioManager class uses the AVAudioEngine API for both song-file-playing and microphone-playing.  
-Many minor code changes were required to allow multi-platform usage.
+Many minor code changes improved both the aesthetics and the performance.
 
-1 Oct 2021 - MuVis v0.9 posted on GitHub (See [here](https://github.com/Keith-43/MuVis-v0.9).)  
-8 Oct 2021 - MuVis v0.9 uploaded to the Apple App Store (See [here](https://apps.apple.com/us/app/muvis-music-visualizer/id1582324352).)  
+3 Oct 2021 - MuVis v0.9 posted on GitHub (See [here](https://github.com/Keith-43/MuVis-v0.9).)
