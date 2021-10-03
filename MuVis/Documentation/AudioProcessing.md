@@ -70,7 +70,7 @@ The AVAudioEngine API allows the developer to set up a sequence of "nodes" to pr
 
 	microphone -------> micMixer ------> mixer -------> mixer2 -------> main -------> (to speakers)
 			    node             node       |   node            mixer
-			    				|                    node
+			    				|                   node
 							v
                                  		sampling tap
   
@@ -84,7 +84,7 @@ If the variable filePlayEnabled is true then the sequence of nodes processes aud
 			node             node      |     node           mixer
 						   |                    node
 						   v
-                             			sampling tap
+						sampling tap
 
 The player node plays the audio stream from the desired music file.
 The mixer node is used to convert the input audio stream to monophonic and to lower the sampling rate to 11025 sps.
