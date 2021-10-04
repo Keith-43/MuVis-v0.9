@@ -1,8 +1,9 @@
-//  ContentView.swift
-//  MuVis
-//
-//  Created by Keith Bromley on 11/20/20.
-//
+///  ContentView.swift
+///  MuVis
+///
+///  Created by Keith Bromley on 20 Nov 2020.
+
+
 import SwiftUI
 
 struct ContentView: View {
@@ -232,22 +233,6 @@ struct ContentView: View {
         settings.selectedColorScheme = (settings.selectedColorScheme == .dark) ? .light : .dark
     }
     
-    /*
-    // ideas for a song-file picker for iOS:
-    
-    fileImporter() (requires macOS 11.0+ or iOS 14.0+) in SwiftUI framework  (Not sure if it works in iPadOS)
-    In macOS, it opens at the user's home directory.  User can select Music, then Artists, then Albums, then Songs, and select a song file.
-    In iOS, it opens at the Files app. User can go to iCloud Drive folder, and can select any song file there.
-    
-    https://developer.apple.com/documentation/swiftui/form/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)
-    https://qiita.com/loic-meister-guild/items/4d592e9a9fb304344950
-    https://blog.rizwan.dev/blog/swiftui-import-export-files-part-2
-    https://github.com/acwright/ImportExport/blob/main/Shared/ContentView.swift
-    https://github-wiki-see.page/m/kengruven/guide/wiki/URL
-    https://programmerah.com/swiftui-2-0-how-to-import-files-into-ios-apps-26846/
-    */
-    
-    
 }  // end of ContentView struct
 
 
@@ -257,4 +242,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environmentObject(AudioManager.audioManager).environmentObject(Settings.settings)
     }
 }
-
