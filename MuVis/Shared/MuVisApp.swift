@@ -1,9 +1,7 @@
-//
-//  MuVisApp.swift
-//  MuVis
-//
-//  Created by Keith Bromley on 11/17/20.
-//
+///  MuVisApp.swift
+///  MuVis
+///
+///  Created by Keith Bromley on 17 Nov 2020.
 
 import SwiftUI
 
@@ -82,7 +80,7 @@ extension Text {
      
      
 
-@main                                   // Thread 1: "player started when in a disconnected state"  // Thread 1: "required condition is false: [_nodes containsObject: node1] && [_nodes containsObject: node2]"
+@main
 struct MuVisApp: App {
     
     var body: some Scene {
