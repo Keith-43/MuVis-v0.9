@@ -6,10 +6,10 @@
 /// node architecture:
 ///
 /// microphone  ------>   micMixer  ------>  mixer ------->  mixer2 ----------> main ------->   (to speakers)
-///                 node                    node        |       node                     mixer
-///                                     |                                    node
-///                                     v
-///                                 sampling tap
+///                       node               node        |   node               mixer
+///                                                      |                      node
+///                                                      v
+///                                                 sampling tap
 ///
 /// The micMixer node amplifies the audio signal from the device's microphone input.
 /// The mixer node is used to convert the input audio stream to monophonic and to lower the sampling rate to 11025 sps.
@@ -20,10 +20,10 @@
 /// node architecture:
 ///
 /// (file)  ---------->  player  ---------> mixer  --------->   delay  ------->  main  -------->  (to speakers)
-///             node                    node        |           node                mixer
-///                                 |                                   node
-///                                 v
-///                             sampling tap
+///                      node               node        |       node             mixer
+///                                                     |                        node
+///                                                     v
+///                                                sampling tap
 ///
 /// The player node plays the audio stream from the desired music file.
 /// The mixer node is used to convert the input audio stream to monophonic and to lower the sampling rate to 11025 sps.
