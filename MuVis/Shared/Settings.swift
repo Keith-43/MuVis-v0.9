@@ -1,9 +1,7 @@
-//
-//  Settings.swift
-//  MuVis
-//
-//  Created by Keith Bromley on 2/16/21.
-//
+///  Settings.swift
+///  MuVis
+///
+///  Created by Keith Bromley on 16 Feb 2021.
 
 import Foundation
 import SwiftUI
@@ -53,9 +51,5 @@ class Settings: ObservableObject {
     var timePassed: Double = 0.0
     var timePassedForLastTenFrames: [Double] = [Double](repeating: 0.0, count: 10) // timePassed for each of the previous 10 frames
     var pointer: Int = 0     // pointer into the above array   0 <= pointer < 10
-    // var period: Double = 0.0
-
-
-
 
 }
