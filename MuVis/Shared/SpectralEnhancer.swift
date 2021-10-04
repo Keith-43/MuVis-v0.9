@@ -1,26 +1,24 @@
-//
-//  SpectralEnhancer.swift
-//  MuVis
-//
-//  SpectralEnhancer is a normalization method used to enhance the display of spectral lines (usually the harmonics
-//  of musical notes) and to reduce the display of noise (usually percussive effects which smear spectral energy
-//  over a large range.)  The technique used here is to (1) slide a moving window across the spectrum seeking local peaks
-//  above some threshold; (2) replace those peaks with the local mean value; (3) compute a moving average
-//  of the resultant reduced-peaks spectrum, and (4) subtract this moving average from the initial spectrum.
-//
-//  This technique is called "Two-Pass Split-Window (TPSW) Filtering" and is described in the paper "Evaluation of
-//  Threshold-Based Algorithms for Detection of Spectral Peaks in Audio" by Leonardo Nunes, Paulo Esquef, and Luiz Biscainho.
-//  This paper can be downloaded from: https://www.lncc.br/%7Epesquef/publications/nat_conferences/nunes_aesbr2007.pdf
-//
-//  The SpectralEnhancer class contains the private method localSum() which creates an output array where each element
-//  is the sum of inputArray[k-M] to inputArray[k+M].  It also contains a public method enhance() which uses the
-//  localSum() method to perform the TPSW filtering on the desired input array.
-//
-//  The SpectralEnhancer class contains a public method pickPeaks().  It produces an outputArray[] that contains "true"
-//  values only at bins that are larger in value than the three bins on either side.
-//
-//  author: Keith Bromley (adapted from a previous C++ version written by Bob Dukelow and translated into java by Elliot Ickovich)
-//
+///  SpectralEnhancer.swift
+///  MuVis
+///
+///  SpectralEnhancer is a normalization method used to enhance the display of spectral lines (usually the harmonics
+///  of musical notes) and to reduce the display of noise (usually percussive effects which smear spectral energy
+///  over a large range.)  The technique used here is to (1) slide a moving window across the spectrum seeking local peaks
+///  above some threshold; (2) replace those peaks with the local mean value; (3) compute a moving average
+///  of the resultant reduced-peaks spectrum, and (4) subtract this moving average from the initial spectrum.
+///
+///  This technique is called "Two-Pass Split-Window (TPSW) Filtering" and is described in the paper "Evaluation of
+///  Threshold-Based Algorithms for Detection of Spectral Peaks in Audio" by Leonardo Nunes, Paulo Esquef, and Luiz Biscainho.
+///  This paper can be downloaded from: https://www.lncc.br/%7Epesquef/publications/nat_conferences/nunes_aesbr2007.pdf
+///
+///  The SpectralEnhancer class contains the private method localSum() which creates an output array where each element
+///  is the sum of inputArray[k-M] to inputArray[k+M].  It also contains a public method enhance() which uses the
+///  localSum() method to perform the TPSW filtering on the desired input array.
+///
+///  The SpectralEnhancer class contains a public method pickPeaks().  It produces an outputArray[] that contains "true"
+///  values only at bins that are larger in value than the three bins on either side.
+///
+///  author: Keith Bromley (adapted from a previous C++ version written by Bob Dukelow and translated into java by Elliot Ickovich)
 
 import Foundation
 
@@ -106,20 +104,17 @@ class SpectralEnhancer {
 
 
 
-    /**
-     * The enhance() method performs two-pass split-window filtering on the inputArray[].  The steps include:
-     * (1) Calculate a local first-pass mean for each bin using a 65-bin window with a 5-bin gap.
-     * (2) Compare each bin value against its respective local first-pass mean. Values above a threshold are replaced
-     * by the local first-pass mean.
-     * (3) Calculate a local second-pass noise mean estimate for each bin of this smoothed data again using a 65-bin
-     * window but this time with no gap.
-     * (4) Subtract this noise mean estimate from each original bin value to reduce the noise.
-     *
-     * @param inputArray
-     * @param meanArray
-     * @param outputArray
-     * @author Keith Bromley (adapted from a previous version written in C++ by Bob Dukelow and translated into java by Elliot Ickovich)
-     */
+/// The enhance() method performs two-pass split-window filtering on the inputArray[].  The steps include:
+///     (1) Calculate a local first-pass mean for each bin using a 65-bin window with a 5-bin gap.
+///     (2) Compare each bin value against its respective local first-pass mean. Values above a threshold are replaced by the local first-pass mean.
+///     (3) Calculate a local second-pass noise mean estimate for each bin of this smoothed data again using a 65-bin window but this time with no gap.
+///     (4) Subtract this noise mean estimate from each original bin value to reduce the noise.
+
+/// @param inputArray
+/// @param meanArray
+/// @param outputArray
+/// @author Keith Bromley (adapted from a previous version written in C++ by Bob Dukelow and translated into java by Elliot Ickovich)
+    
     public func findMean(inputArray: [Float]) ->  ([Float]) {
         // In the first pass the input array is filtered through a split window.
         // We do this in three steps: first sum over the total window, then sum over the gap,
